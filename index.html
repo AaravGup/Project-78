@@ -1,0 +1,47 @@
+<html>
+    <head><title>
+        My family book
+    </title></head>
+    <style>
+        body{
+        text-align: center;
+        background: radial-gradient(green,lightgreen);    
+        }
+        h1 {
+            font-size: 50px;
+            color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+       p {
+           font-size: 30px;
+
+       }
+       img {
+           width: 500px;
+           height: 400px;
+       }
+
+    </style>
+    <body>
+        <h1>My family book</h1>
+        <img  id="FamilyMemberImage">
+        <p  src="family-cartoon.jpg" id="FamilyMenberName">My Family</p>
+        <button onclick="update();">Next</button>
+    </body>
+    <script>
+        var images=["family-cartoon.jpg","boy.jpg","girl.png","mother.jpg","father.jpg"];
+        var names=["My Family","Aarav Gupta","Anaisha Gupta","Pooja Gupta","Nitin Gupta"];
+        var i = 0;
+        function update(){
+            i++;
+            var numbers_of_family_menbers_in_array= 4
+            if(i>numbers_of_family_menbers_in_array){
+                i = 0;
+            }
+            var updatedImage = images[i];
+            var updatedName = names[i];
+            document.getElementById("FamilyMemberImage").src=updatedImage;
+            document.getElementById("FamilyMenberName").innerHTML=updatedName;
+        }
+    </script>
+</html>
